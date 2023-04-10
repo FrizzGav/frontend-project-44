@@ -10,7 +10,25 @@ const askUserAnswer = () => {
   const userAnswer = readlineSync.question('Answer: ');
   return userAnswer;
 };
+const areUserRight = (answer, correctAnswer, name) => {
+  if (parseInt(answer, 10) === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again ${name}!`);
+  return false;
+};
+
+const gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+  return gcd(b, a % b);
+};
+
 export {
+  gcd,
   getRandomIntInclusive,
   askUserAnswer,
+  areUserRight,
 };
