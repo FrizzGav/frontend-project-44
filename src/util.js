@@ -26,9 +26,13 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
+const getRandomNumber = (number = 100) => Math.floor(Math.random() * number);
+export default getRandomNumber;
+
 export {
   gcd,
   getRandomIntInclusive,
   askUserAnswer,
   areUserRight,
+  getRandomNumber,
 };

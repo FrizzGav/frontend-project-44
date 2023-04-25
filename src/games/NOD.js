@@ -4,6 +4,7 @@ import welcome from '../cli.js';
 
 const gcdGame = () => {
   const name = welcome();
+  console.log('Find the greatest common divisor of given numbers.');
   const rounds = 3;
   for (let i = 0; i < rounds; i += 1) {
     const num1 = getRandomIntInclusive(1, 100);

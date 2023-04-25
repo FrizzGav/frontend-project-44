@@ -1,3 +1,4 @@
-import gcd from '../src/games/NOD.js';
+#!/usr/bin/env node
+import gcdGame from '../src/games/NOD.js';
 
-gcd();
+gcdGame();

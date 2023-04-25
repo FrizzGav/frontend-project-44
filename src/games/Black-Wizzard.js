@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import welcome from '../cli.js';
-import getRandomIntInclusive from '../util.js';
+import { getRandomIntInclusive } from '../util.js';
 
 const isEven = (number) => (number % 2 === 0);
 
@@ -16,7 +16,7 @@ function evenGame() {
     if (answer === expectedAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
+      console.log(`'${answer}' is wrong answer -_-. Correct answer was '${expectedAnswer}'.`);
       return console.log(`Let's try again, ${name}!`);
     }
   }
