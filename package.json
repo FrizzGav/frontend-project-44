@@ -29,7 +29,9 @@
 
   "repository": {
 
-    "url": "git+https://github.com/Notakachimoto/frontend-project-44.git"
+    "url": "git+https://github.com/Notakachimoto/frontend-project-44.git",
+
+    "type": "git"
 
   },
 
