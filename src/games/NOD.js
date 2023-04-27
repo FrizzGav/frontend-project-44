@@ -14,7 +14,7 @@ const gcdGame = () => {
     const correctAnswer = gcd(num1, num2);
     const isRight = areUserRight(answer, correctAnswer, name);
     if (!isRight) {
-      console.log('Let\'s try again, Tirion!');
+      return null;
     }
   }
 
