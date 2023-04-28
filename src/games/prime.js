@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+import welcome from '../cli.js';
+
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
@@ -12,7 +14,8 @@ const isPrime = (num) => {
   return true;
 };
 
-const playPrimeGame = (nume) => {
+const playPrimeGame = () => {
+  const name = welcome();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
   const roundsCount = 3;
   let correctAnswersCount = 0;
@@ -26,15 +29,12 @@ const playPrimeGame = (nume) => {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again ${nume}!`);
+      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again ${name}!`);
       return;
     }
   }
 
-  console.log(`Congratulations, ${nume}! You won!\nYour score: ${correctAnswersCount}/${roundsCount}`);
+  console.log(`Congratulations, ${name}! You won!\nYour score: ${correctAnswersCount}/${roundsCount}`);
 };
 
-const userName = readlineSync.question('May I have your name? ');
-playPrimeGame(userName);
-
-export default isPrime;
+export default playPrimeGame;
