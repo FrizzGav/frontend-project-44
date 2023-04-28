@@ -29,7 +29,7 @@ const playPrimeGame = () => {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }
