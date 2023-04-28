@@ -12,7 +12,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const playPrimeGame = (name) => {
+const playPrimeGame = (nume) => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
   const roundsCount = 3;
   let correctAnswersCount = 0;
@@ -26,12 +26,12 @@ const playPrimeGame = (name) => {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer -_-. Correct answer was '${correctAnswer}'.\nLet's try again ${nume}!`);
       return;
     }
   }
 
-  console.log(`Congratulations, ${name}! You won!\nYour score: ${correctAnswersCount}/${roundsCount}`);
+  console.log(`Congratulations, ${nume}! You won!\nYour score: ${correctAnswersCount}/${roundsCount}`);
 };
 
 const userName = readlineSync.question('May I have your name? ');
